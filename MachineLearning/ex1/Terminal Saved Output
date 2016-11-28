@@ -1,0 +1,354 @@
+Last login: Sat Apr 30 19:08:17 on ttys001
+YanlideMacBook-Pro:~ harrisoncui$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> help clc
+'clc' is a built-in function from the file libinterp/corefcn/sysdep.cc
+
+ -- Built-in Function:  clc ()
+ -- Built-in Function:  home ()
+     Clear the terminal screen and move the cursor to the upper left
+     corner.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+octave:2> help clear
+'clear' is a built-in function from the file libinterp/corefcn/variables.cc
+
+ -- Command:  clear [options] pattern ...
+     Delete the names matching the given patterns from the symbol
+     table.  The pattern may contain the following special characters:
+
+    `?'
+          Match any single character.
+
+    `*'
+          Match zero or more characters.
+
+    `[ LIST ]'
+          Match the list of characters specified by LIST.  If the first
+          character is `!' or `^', match all characters except those
+          specified by LIST.  For example, the pattern `[a-zA-Z]' will
+          match all lowercase and uppercase alphabetic characters.
+
+     For example, the command
+
+          clear foo b*r
+
+     clears the name `foo' and all names that begin with the letter `b'
+'clear' is a built-in function from the file libinterp/corefcn/variables.cc
+
+ -- Command:  clear [options] pattern ...
+     Delete the names matching the given patterns from the symbol
+     table.  The pattern may contain the following special characters:
+
+    `?'
+          Match any single character.
+
+    `*'
+          Match zero or more characters.
+
+    `[ LIST ]'
+          Match the list of characters specified by LIST.  If the first
+          character is `!' or `^', match all characters except those
+          specified by LIST.  For example, the pattern `[a-zA-Z]' will
+          match all lowercase and uppercase alphabetic characters.
+
+     For example, the command
+
+          clear foo b*r
+
+     clears the name `foo' and all names that begin with the letter `b'
+octave:3> help close all
+error: help: invalid input
+octave:3> help close
+'close' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/util/close.m
+
+ -- Command:  close
+ -- Command:  close (H)
+ -- Command:  close all
+ -- Command:  close all hidden
+     Close figure window(s).
+
+     When called with no arguments, close the current figure.  This is
+     equivalent to `close (gcf)'.  If the input H is a graphic handle,
+     or vector of graphics handles, then close each figure in H.
+
+     If the argument "all" is given then all figures with visible
+     handles (HandleVisibility = "on") are closed.
+
+     If the argument "all hidden" is given then all figures, including
+     hidden ones, are closed.
+
+     Implementation Note: `close' operates by calling the function
+     specified by the "closerequestfcn" property for each figure.  By
+     default, the function `closereq' is used.  It is possible that the
+     function invoked will delay or abort removing the figure.  To
+     remove a figure without executing any callback functions use
+     `delete'.  When writing a callback function to close a window do
+     not use `close' to avoid recursion.
+
+     See also: closereq, delete.
+
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+octave:4> ex1_multi
+error: 'ex1_multi' undefined near line 1 column 1
+octave:4> ls
+Applications	Downloads	Music		VirtualBox VMs
+Desktop		Library		Pictures	anaconda
+Documents	Movies		Public		lctool
+octave:5> cd ..
+octave:6> ls
+Shared		harrisoncui	yanlifeng
+octave:7> cd ..
+octave:8> ls
+Applications			home
+Library				installer.failurerequests
+Network				net
+System				private
+Users				sbin
+Volumes				study
+bin				tmp
+cores				usr
+dev				var
+etc				work
+family
+octave:9> cd ..
+octave:10> ls
+Applications			home
+Library				installer.failurerequests
+Network				net
+System				private
+Users				sbin
+Volumes				study
+bin				tmp
+cores				usr
+dev				var
+etc				work
+family
+octave:11> cd /study/ml
+octave:12> ls
+Git_HW.txt			machine-learning-ex1.zip
+machine-learning-ex1
+octave:13> cd machine-learning-ex1
+octave:14> ls
+ex1	ex1.pdf	ex100.m
+octave:15> cd ex1
+octave:16> ls
+Git_HW.txt		ex1data2.txt		plotData.m
+computeCost.m		featureNormalize.m	submit.m
+computeCostMulti.m	gradientDescent.m	token.mat
+ex1.m			gradientDescentMulti.m	warmUpExercise.m
+ex1_multi.m		lib
+ex1data1.txt		normalEqn.m
+octave:17> ex1_multi
+
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $165489064.118993
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 89597.909542 
+ 139.210674 
+ -8738.019112 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $293081.464335
+octave:18> ex1_multi
+
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $165489064.118993
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 89597.909542 
+ 139.210674 
+ -8738.019112 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $293081.464335
+octave:19> setenv("GNUTERM", "X11")
+octave:20> ex1_multi
+
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Unknown or ambiguous terminal name 'X11'
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $165489064.118993
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 89597.909542 
+ 139.210674 
+ -8738.019112 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $293081.464335
+octave:21> setenv("GNUTERM", "qt")
+octave:22> ex1_multi
+
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $165489064.118993
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 89597.909542 
+ 139.210674 
+ -8738.019112 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $293081.464335
+octave:23> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (harrison8011@gmail.com)? (Y/n): Y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+octave:24> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (harrison8011@gmail.com)? (Y/n): Y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+octave:25> 
